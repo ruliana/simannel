@@ -38,5 +38,3 @@ end
 conference = Conference.new(sessions)
 conference = conference.organize
 conference.pretty_print(STDOUT)
-
-
