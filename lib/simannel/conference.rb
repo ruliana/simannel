@@ -31,8 +31,5 @@ class Conference
 
   # Simulated Anneling protocol
   alias :random_neighbor :random_move
-
-  def energy
-    @energy ||= time_violated / time_total.to_f
-  end
+  alias :energy :time_violated
 end

@@ -39,10 +39,10 @@ class Session
   def pretty_print(io, nesting = 0)
     io.printf "%s(%d/%d..%d) %s\n",
       "\t" * nesting,
-      time_total,
-      time_limit.min,
-      time_limit.max,
-      name
+      @time_total,
+      @time_limit.min,
+      @time_limit.max,
+      @name
 
     @talks.each { |t| t.pretty_print(io, nesting + 1) }
   end
