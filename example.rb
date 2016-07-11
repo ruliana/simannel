@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 $LOAD_PATH << File.join(__dir__, "lib")
-require 'simannel'
+require 'confchall'
 
 talks = [["Writing Fast Tests Against Enterprise Rails", "60min"],
          ["Overdoing it in Python", "45min"],

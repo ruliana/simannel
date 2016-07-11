@@ -1,1 +1,1 @@
-require 'simannel'
+require 'confchall'

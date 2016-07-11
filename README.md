@@ -1,7 +1,7 @@
 Conference Talks Challenge
 ==========================
 
-This project is an example of the Conference Talks Challenge solved using Simulated Anneling algorithm.
+This project is an example of the Conference Talks Challenge solved using Simulated Annealing algorithm.
 
 How to run?
 -----------
@@ -18,5 +18,5 @@ Noteworthy parts
 -----------------
 
 * All classes are immutable
-* Simulated Anneling implements a simple retry strategy
+* Simulated Annealing implements a simple retry strategy
 * This implementation takes 700 iterations on average to find a solution

@@ -1,4 +1,4 @@
-class SimulatedAnneling
+class SimulatedAnnealing
   def initialize
     @max_iterations = 1000
     @max_retries = 5

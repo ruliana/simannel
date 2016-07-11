@@ -4,7 +4,7 @@ class Conference
   end
 
   def organize
-    solver = SimulatedAnneling.new
+    solver = SimulatedAnnealing.new
     solver.call(self)
   end
 
@@ -32,7 +32,7 @@ class Conference
     @sessions.each { |s| s.pretty_print(io) }
   end
 
-  # Simulated Anneling protocol
+  # Simulated Annealing protocol
   alias :random_neighbor :random_move
   alias :energy :time_violated
 
