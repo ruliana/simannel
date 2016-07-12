@@ -1,5 +1,6 @@
 require 'confchall/support/duration'
 require 'confchall/simulated_annealing'
+require 'confchall/simulated_annealing_lam_schedule'
 require 'confchall/talk'
 require 'confchall/session'
 require 'confchall/conference'
