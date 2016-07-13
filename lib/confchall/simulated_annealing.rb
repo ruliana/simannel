@@ -1,11 +1,14 @@
 class SimulatedAnnealing
   def initialize
-    @max_iterations = 1000
-    @max_retries = 5
+    @max_iterations = 50
+    @max_retries = 40
   end
 
-  def call(state)
+  def call(state, spy = {})
+    return state if state.energy <= 0
     best = state
+    counter = 0
+    energies = []
 
     # Retry from best state if it hits a dead end
     @max_retries.times do
@@ -13,9 +16,11 @@ class SimulatedAnnealing
 
       # Simulated Anneling
       @max_iterations.times do |iteration|
-        return current if current.energy <= 0
+        counter += 1
+        energies << current.energy
 
         new = current.random_neighbor
+        return current if current.energy <= 0
 
         best = new if new.energy < best.energy
         current = new if transition_probability(current, new, iteration) > rand
@@ -23,6 +28,9 @@ class SimulatedAnnealing
     end
 
     best
+  ensure
+    spy[:counter] = counter
+    spy[:energies] = energies
   end
 
   def transition_probability(old, new, iteration)
